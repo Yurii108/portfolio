@@ -13,11 +13,12 @@ const Footer = () => {
     <footer className="mt-24" id='footer'>
       <hr className="w-full h-px mx-auto mt-8 bg-black/10  dark:bg-white/10 border-0" />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-7xl ">
-        <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
-          <div className="flex flex-row items-center justify-center space-x-1 text-black/40 dark:text-neutral-300">
+        <div className="mx-auto p-4 flex flex-col-reverse text-center text-neutral-900 md:flex-row md:justify-between">
+          <div className="flex flex-row items-center justify-center space-x-1 text-black/40 dark:text-neutral-300/40">
             © {currentYear} Yurii Paraska. All rights reserved.<a href="/" className="hover:underline"></a>
           </div>
-          <div className="flex flex-row items-center justify-center space-x-4 mb-1">
+
+          <div className="flex flex-row items-center justify-center space-x-8 py-6 md:py-2 mb-1">
             <a href="https://github.com/Yurii108" rel="noreferrer" target="_blank">
               <AiOutlineGithub
                 className="hover:-translate-y-1 transition-all hover:!text-gray-500 cursor-pointer text-black/40 dark:text-neutral-300"

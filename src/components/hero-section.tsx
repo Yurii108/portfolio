@@ -8,8 +8,9 @@ import { HiArrowDown } from "react-icons/hi";
 
 const HeroSection = () => {
   return (
-    <section id="home">
-      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
+    <section id="home" className="h-[calc(100vh-60px)] md:h-[calc(100vh-20px)] flex flex-col ">
+      <div></div>
+      <div className="flex flex-1 flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 md:flex-row md:space-x-4 md:text-left">
         <div className="md:mt-2 md:w-4/12">
           <Image
             src="/headshot.jpg"
@@ -20,13 +21,13 @@ const HeroSection = () => {
           />
         </div>
         <div className="md:mt-2 md:w-8/12">
-          <h1 className="!text-5xl font-bold mt-6 md:mt-0 md:text-7xl">
+          <h1 className="!text-4xl font-bold mt-6 md:mt-0 md:!text-5xl">
             Hi, my name is Yurii.
           </h1>
-          <h2 className="!text-5xl mt-4 mb-6 md:text-2xl font-semibold text-[#38b2ac]">
+          <h2 className="!text-3xl mt-4 mb-6 md:!text-5xl font-semibold text-[#38b2ac]">
             I&#39;m a{" "}Front-end developer.
           </h2>
-          <Link href="https://drive.google.com/file/d/1W_A1-Vb2RX-onAl-GP7DMZCX_BsyRzu8/view" rel="noreferrer" target="_blank">
+          <Link href="https://drive.google.com/file/d/1W_A1-Vb2RX-onAl-GP7DMZCX_BsyRzu8/view" rel="noreferrer" target="_blank" className="block mx-auto w-[136px] md:mx-0">
             <button className="animated-button">
               <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -44,7 +45,7 @@ const HeroSection = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-row items-center text-center justify-center cursor-pointer">
+      <div className="flex items-center justify-center cursor-pointer">
         <LinkScroll
           to="about"
           activeClass="active"
