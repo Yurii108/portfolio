@@ -41,7 +41,7 @@ const AboutSection = () => {
                 Get to know me!
               </h1>
               <p>
-                Front-end developer with over 2 years of experience, including developing 11 web applications at Extej. Implemented innovative solutions to enhance product scalability and improve user experience through REST API integration.
+                <strong>Front-end developer</strong> with over 2 years of experience, including developing 11 web applications at Extej. Implemented innovative solutions to enhance product scalability and improve user experience through REST API integration.
               </p>
               <br />
               <p>

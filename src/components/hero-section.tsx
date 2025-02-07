@@ -6,7 +6,10 @@ import Link from "next/link"
 import { Link as LinkScroll } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
 
+const resumeLink = process.env.NEXT_PUBLIC_RESUME || "";
+
 const HeroSection = () => {
+
   return (
     <section id="home" className="h-[calc(100vh-60px)] md:h-[calc(100vh-20px)] flex flex-col ">
       <div></div>
@@ -27,7 +30,7 @@ const HeroSection = () => {
           <h2 className="!text-3xl mt-4 mb-6 md:!text-5xl font-semibold text-[#38b2ac]">
             I&#39;m a{" "}Front-end developer.
           </h2>
-          <Link href="https://drive.google.com/file/d/1W_A1-Vb2RX-onAl-GP7DMZCX_BsyRzu8/view" rel="noreferrer" target="_blank" className="block mx-auto w-[136px] md:mx-0">
+          <Link href={resumeLink} rel="noreferrer" target="_blank" className="block mx-auto w-[136px] md:mx-0">
             <button className="animated-button">
               <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
                 <path
