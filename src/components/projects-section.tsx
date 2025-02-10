@@ -7,11 +7,11 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 const projectsFromLastJob = [
   {
     image: "/mdl.png",
-    link: "https://mevdex.extej.com/",
+    link: "https://md-landing.vercel.app/",
   },
   {
     image: "/mdd.png",
-    link: "https://mevdex-app.extej.com/",
+    link: "https://md-db.vercel.app/",
   },
   {
     image: "/ev.png",
