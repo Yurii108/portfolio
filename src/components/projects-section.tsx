@@ -64,17 +64,19 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <h1 className="my-10 text-center font-bold text-4xl">
-        Some projects from my last job
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-      </h1>
+      <SlideUp >
+        <h1 className="my-10 text-center font-bold text-4xl">
+          Some projects from my last job
+          <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+        </h1>
+      </SlideUp>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {projectsFromLastJob.map((project, idx) => {
           return (
-            <Link key={idx} className={`${idx === 0 ? "col-span-2" : "col-span-1"} shadow-xl overflow-hidden rounded-xl`} href={project.link} target="_blank" >
-              <SlideUp offset="-5px 0px -50px 0px">
-                <div className={`relative  w-fill h-[200px]`}>
+            <SlideUp className={`${idx === 0 ? "col-span-2" : "col-span-1"} shadow-xl overflow-hidden rounded-xl`} delay={idx * 0.1} >
+              <Link key={idx} href={project.link} target="_blank" >
+                <div className={`relative w-fill h-[200px]`}>
                   <Image
                     src={project.image}
                     alt=""
@@ -82,22 +84,25 @@ const ProjectsSection = () => {
                     className="md:blur-[3px] hover:blur-0 object-cover transition-all duration-300"
                   />
                 </div>
-              </SlideUp>
-            </Link>
+              </Link>
+            </SlideUp>
           )
         })}
       </div>
 
-      <h1 className="my-10 text-center font-bold text-4xl">
-        Own projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-      </h1>
+      <SlideUp >
+        <h1 className="my-10 mt-32 text-center font-bold text-4xl">
+          Own projects
+          <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+
+        </h1>
+      </SlideUp>
 
       <div className="flex flex-col space-y-16">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
-              <SlideUp offset="-100px 0px -100px 0px">
+              <SlideUp delay={idx * 0.1} >
                 <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
                     <Link href={project.link} target="_blank">
@@ -137,7 +142,6 @@ const ProjectsSection = () => {
             </div>
           )
         })}
-
       </div>
     </section>
   )
