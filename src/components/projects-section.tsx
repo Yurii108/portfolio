@@ -74,8 +74,8 @@ const ProjectsSection = () => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {projectsFromLastJob.map((project, idx) => {
           return (
-            <SlideUp className={`${idx === 0 ? "col-span-2" : "col-span-1"} shadow-xl overflow-hidden rounded-xl`} delay={idx * 0.1} >
-              <Link key={idx} href={project.link} target="_blank" >
+            <SlideUp key={idx} className={`${idx === 0 ? "col-span-2" : "col-span-1"} shadow-xl overflow-hidden rounded-xl`} delay={idx * 0.1} >
+              <Link href={project.link} target="_blank" >
                 <div className={`relative w-fill h-[200px]`}>
                   <Image
                     src={project.image}
