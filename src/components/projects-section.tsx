@@ -42,7 +42,7 @@ const projects = [
       "This is a simulator for learning blind typing on the keyboard. It's still in development. Technologies: Next.js, shadcn/ui, i18",
     image: "/type-fast.png",
     github: "",
-    link: "https://fast-type-dev.labsofbytes.com/",
+    link: "https://fast-type.labsofbytes.com/",
   },
   {
     name: "Pizza Ordering App",
