@@ -39,7 +39,8 @@ const projects = [
   {
     name: "Type Fast",
     description:
-      "This is a simulator for learning blind typing on the keyboard. It's still in development. Technologies: Next.js, shadcn/ui, i18",
+      "This is a simulator for learning blind typing on the keyboard. It's still in development. Soon will be added more features like profile with authorization, statistics your results and game(race) with other players in real time.",
+    technologies: ["Next.js", "shadcn/ui", "i18"],
     image: "/type-fast.png",
     github: "",
     link: "https://fast-type.labsofbytes.com/",
@@ -47,14 +48,33 @@ const projects = [
   {
     name: "Pizza Ordering App",
     description:
-      "A comprehensive pizza ordering website built with Next.js, offering a complete shopping experience, including product filtering, cart functionality, and user profile management.Technologies: Next.js, TypeScript, TailwindCSS, Prisma + PostgreSQL, NextAuth, Zustand, Resend",
+      "A comprehensive pizza ordering website built with Next.js, offering a complete shopping experience, including product filtering, cart functionality, and user profile management.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma + PostgreSQL",
+      "NextAuth",
+      "Zustand",
+      "Resend",
+    ],
     image: "/pizza.png",
     github: "https://github.com/labsofbytes/next-pizza",
     link: "https://next-pizza-lab.vercel.app/",
   },
   {
     name: "Data Management Platform",
-    description: "Built with Next.js and AWS integration, this application provides data processing, filtering, and addition feature demonstrating stability and efficiency through cloud-based solutio. Technologies: Next.js, TailwindCSS, Redux Toolkit, MUI, Node.js, Prisma, AWS (EC2, RDS, API Gateway, Amplify, S3)",
+    description:
+      "Built with Next.js and AWS integration, this application provides data processing, filtering, and addition feature demonstrating stability and efficiency through cloud-based solutions.",
+    technologies: [
+      "Next.js",
+      "TailwindCSS",
+      "Redux Toolkit",
+      "MUI",
+      "Node.js",
+      "Prisma",
+      "AWS (EC2, RDS, API Gateway, Amplify, S3)",
+    ],
     image: "/xs.png",
     github: "https://github.com/Yurii108/next-management-dashboard",
     link: "https://main.d2vyr4gilosyz5.amplifyapp.com/",
@@ -119,6 +139,9 @@ const ProjectsSection = () => {
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
+                    </p>
+                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                      {project.technologies.join(", ")}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
                       {
