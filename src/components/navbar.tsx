@@ -7,7 +7,6 @@ import { Link as LinkScroll } from "react-scroll/modules"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
 import { IoMdMenu, IoMdClose } from "react-icons/io"
-import lenis from "@/lib/lenis"
 
 interface NavItem {
   label: string
@@ -54,7 +53,7 @@ export default function Navbar() {
   const handleClick = (id: string) => {
     const target = document.getElementById(id)
     if (target) {
-      lenis.scrollTo(target)
+      // lenis.scrollTo(target)
       setNavbar(false)
     }
   }
@@ -93,8 +92,8 @@ export default function Navbar() {
                       }
                       activeClass="bg-gray-200 dark:bg-white/5"
                       spy={true}
-                      smooth={false}
-                      offset={0}
+                      smooth={true}
+                      offset={-100}
                       duration={1000}
                       onClick={() => {
                         setNavbar(!navbar)
