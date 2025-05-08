@@ -1,13 +1,14 @@
 import React from "react"
 import Image from "next/image"
 import SlideUp from "./slide-up"
+import Link from "next/link"
 
 const skills = [
   { skill: "Next.js" },
   { skill: "React" },
   { skill: "JavaScript" },
   { skill: "TypeScript" },
-  { skill: "Redux" },
+  { skill: "Redux Toolkit" },
   { skill: "Zustand" },
   { skill: "HTML" },
   { skill: "CSS" },
@@ -20,9 +21,19 @@ const skills = [
   { skill: "Shadcn/ui" },
   { skill: "Chart.js" },
   { skill: "Highcharts" },
-  { skill: "NPM/PNPM" },
+  { skill: "NPM/PNPM/BUN" },
   { skill: "Figma" },
   { skill: "Photoshop" },
+  { skill: "Tailwind CSS" },
+  { skill: "Node.js" },
+  { skill: "Express" },
+  { skill: "Prisma" },
+  { skill: "PostgreSQL" },
+  { skill: "AWS (EC2, RDS, API Gateway, Amplify, S3)" },
+  { skill: "Socket.io" },
+  { skill: "JWT" },
+  { skill: "CORS" },
+  { skill: "Cookies" },
 ]
 
 const AboutSection = () => {
@@ -44,17 +55,13 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              <strong>Front-end developer</strong> with over 2 years of experience, including developing 11 web applications at Extej. Implemented innovative solutions to enhance product scalability and improve user experience through REST API integration.
+              I’m a <strong>full-stack developer</strong> with 2 years of front-end experience and 6 months in back-end development, building complete products from idea to launch using modern technologies like React, Next.js, TypeScript and Node.js.
             </p>
             <br />
             <p>
-              Optimized code in three projects, resolving critical bugs and boosting performance by 20%. Developed analytical dashboards using Chart.js and HighCharts, enabling data visualization for decision-making. Delivered responsive design and animations with CSS, Animation API, and Framer Motion, creating user-friendly and visually appealing interfaces.
+              I’ve worked both in teams and independently — my latest project, <Link href="https://fast-type.labsofbytes.com/" target="_blank"><span className="underline text-blue-600">Fast Type Game</span></Link> is a strong example of my end-to-end development skills. Comfortable with APIs, databases, real-time features, and performance optimization. Quick to learn, responsible, and driven to build products that create real value.
             </p>
-            <br />
-            <p>
-              English (B1): document technical processes and communicate with the team. I am looking for a company where I can develop modern applications, engage users, and deliver value to the business.
-            </p>
-            <br />
+
           </SlideUp>
 
           <SlideUp className="text-center md:w-1/2 md:text-left" delay={0.3}>

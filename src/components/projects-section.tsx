@@ -35,12 +35,22 @@ const projectsFromLastJob = [
   },
 ]
 
+const fastTypeDescOfList = ['Developed a real-time multiplayer typing game usingWebSockets (Socket.IO) for live interaction between users.',
+  'Implemented secure user authentication with double token validation and Google OAuth integration. Built a backend with Node.js, Express, and Prisma ORM to manage PostgreSQL database operations efficiently. ',
+  'Created a custom typing engine with complex calculations to determine typing speed, accuracy, winner logic, and visualized results via charts and detailed statistics.',
+  'Added multilingual support using i18next, with English and Ukrainian language switching.',
+  'Designed modern, responsive UI with Shadcn UI, Tailwind CSS, and TanStack Table, applying best UI/UX practices.',
+  'Worked with cookies, CORS configuration, and integrated Google Analytics for tracking user behavior.',
+  'Entire project (frontend and backend) is written in TypeScript for better type safety and maintainability.',
+  'Used Framer Motion to deliver smooth transitions and animations across key UI components.',]
+
 const projects = [
   {
-    name: "Type Fast",
+    name: "Fast Type Game",
     description:
-      "This is a simulator for learning blind typing on the keyboard. It's still in development. Soon will be added more features like profile with authorization, statistics your results and game(race) with other players in real time.",
-    technologies: ["Next.js", "shadcn/ui", "i18"],
+      "This is a simulator for learning blind typing on the keyboard. It's still in development. Soon will be added more features like profile with authorization, statistics your results and game(race) with other players in real time. ",
+    descriptionOfList: fastTypeDescOfList,
+    technologies: ["Next.js", "i18", "Shadcn/ui", "Node.js", "Prisma", "Tanstack Query", "Socket.io",],
     image: "/type-fast.png",
     github: "",
     link: "https://fast-type.labsofbytes.com/",
@@ -140,6 +150,15 @@ const ProjectsSection = () => {
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
+
+                    {project.descriptionOfList && project.descriptionOfList.map((item, idx) => {
+                      return (
+                        <li key={idx} className="text-xl leading-1 mb-1 text-neutral-600 dark:text-neutral-400">
+                          {item}
+                        </li>
+                      )
+                    })}
+
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.technologies.join(", ")}
                     </p>

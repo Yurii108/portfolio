@@ -16,13 +16,17 @@ const HeroSection = () => {
       <div></div>
       <div className="flex flex-1 flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 md:flex-row md:space-x-4 md:text-left">
         <SlideUp className="md:mt-2 md:w-4/12">
-          <Image
-            src="/headshot.jpg"
-            alt=""
-            width={325}
-            height={325}
-            className="rounded-full shadow-2xl"
-          />
+          <div className="flex items-center justify-center relative">
+            <div className="hidden lg:block  border-[3px] border-[#38b2ac] rounded-full w-[325px] h-[325px] absolute shadow-2xl shadow-[#38b2ac]/20" />
+            <Image
+              src="/headshot.jpg"
+              alt=""
+              width={325}
+              height={325}
+              className="rounded-full"
+            />
+          </div>
+
         </SlideUp>
         <div className="md:mt-2 md:w-8/12">
 
@@ -33,7 +37,7 @@ const HeroSection = () => {
           </h1>
           <h2 className="!text-3xl mt-4 mb-6 md:!text-5xl font-semibold text-[#38b2ac]">
             <SlideUp delay={0.2}>
-              I&#39;m a{" "}Front-end developer.
+              I&#39;m a{" "}Full Stack developer.
             </SlideUp>
           </h2>
           <Link href={resumeLink} rel="noreferrer" target="_blank" className="block mx-auto w-[136px] md:mx-0">
