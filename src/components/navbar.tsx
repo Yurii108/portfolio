@@ -7,6 +7,7 @@ import { Link as LinkScroll } from "react-scroll/modules"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
 import { IoMdMenu, IoMdClose } from "react-icons/io"
+import lenis from "@/lib/lenis"
 
 interface NavItem {
   label: string
@@ -42,11 +43,21 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
+
     };
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+  const handleClick = (id: string) => {
+    const target = document.getElementById(id)
+    if (target) {
+      lenis.scrollTo(target)
+      setNavbar(false)
+    }
+  }
 
   return (
     <header className={`w-full mx-auto fixed top-0 z-50 bg-white dark:bg-[#0b0d12] ${isScrolled ? 'shadow dark:border-b dark:border-white/10' : 'border-none'} ${navbar ? "h-full md:h-auto" : ""}`}>
@@ -78,16 +89,20 @@ export default function Navbar() {
                       key={idx}
                       to={item.page}
                       className={
-                        "block lg:inline-block text-center text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
+                        "block lg:inline-block text-center hover:bg-gray-200 text-gray-900 dark:text-white dark:hover:bg-white/5 rounded-xl "
                       }
-                      activeClass="active"
+                      activeClass="bg-gray-200 dark:bg-white/5"
                       spy={true}
-                      smooth={true}
-                      offset={-100}
-                      duration={500}
-                      onClick={() => setNavbar(!navbar)}
+                      smooth={false}
+                      offset={0}
+                      duration={1000}
+                      onClick={() => {
+                        setNavbar(!navbar)
+                        handleClick(item.page)
+                      }
+                      }
                     >
-                      <button className="w-[104px] hover:bg-gray-200 text-gray-900 dark:text-white dark:hover:bg-white/5 px-4 py-2 rounded-xl transition-bg duration-100 cursor-pointer">
+                      <button className="w-[104px]  px-4 py-2 transition-bg duration-100 cursor-pointer">
                         {item.label}
                       </button>
                     </LinkScroll>
