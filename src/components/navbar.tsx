@@ -17,6 +17,7 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
     page: "home",
+    disabled: true
   },
   {
     label: "About me",
@@ -90,7 +91,7 @@ export default function Navbar() {
                       className={
                         "block lg:inline-block text-center hover:bg-gray-200 text-gray-900 dark:text-white dark:hover:bg-white/5 rounded-xl "
                       }
-                      activeClass="bg-gray-200 dark:bg-white/5"
+                      activeClass={item.page === "home" ? "" : "bg-gray-200 dark:bg-white/5"}
                       spy={true}
                       smooth={true}
                       offset={-100}

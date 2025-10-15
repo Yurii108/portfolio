@@ -6,6 +6,7 @@ import Link from "next/link"
 const skills = [
   { skill: "Next.js" },
   { skill: "React" },
+  { skill: "AI api" },
   { skill: "JavaScript" },
   { skill: "TypeScript" },
   { skill: "Redux Toolkit" },
@@ -15,7 +16,7 @@ const skills = [
   { skill: "Git" },
   { skill: "Framer Motion" },
   { skill: "React Hook Form" },
-  { skill: "Tailwind CSS" },
+  { skill: "TanStack Query" },
   { skill: "AntD" },
   { skill: "MUI" },
   { skill: "Shadcn/ui" },
@@ -27,6 +28,7 @@ const skills = [
   { skill: "Tailwind CSS" },
   { skill: "Node.js" },
   { skill: "Express" },
+  { skill: "Supabase" },
   { skill: "Prisma" },
   { skill: "PostgreSQL" },
   { skill: "AWS (EC2, RDS, API Gateway, Amplify, S3)" },
@@ -55,12 +57,22 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              I’m a <strong>full-stack developer</strong> with 2 years of front-end experience and 6 months in back-end development, building complete products from idea to launch using modern technologies like React, Next.js, TypeScript and Node.js.
+              I’m a <strong>full-stack developer</strong> with over 2 years of experience building complete products from idea to launch using modern technologies like React, Next.js, TypeScript, and Node.js.
+              I focus on creating clean, scalable, and user-friendly applications with a strong architectural foundation.
             </p>
             <br />
             <p>
-              I’ve worked both in teams and independently — my latest project, <Link href="https://fast-type.labsofbytes.com/" target="_blank"><span className="underline text-blue-600">Fast Type Game</span></Link> is a strong example of my end-to-end development skills. Comfortable with APIs, databases, real-time features, and performance optimization. Quick to learn, responsible, and driven to build products that create real value.
+              I’ve worked both independently and as part of a team — my recent project&nbsp;
+              <strong>The Purpose</strong>&nbsp;
+              demonstrates my experience with AI integrations, Supabase, and modern state management.
+              Another project&nbsp;
+              <Link href="https://fast-type.labsofbytes.com/" target="_blank">
+                <span className="underline text-blue-600">Fast Type Game</span>
+              </Link>&nbsp;
+              highlights my skills in real-time systems and performance optimization.
+              I’m passionate about continuous learning, building meaningful digital products, and delivering reliable solutions that create real value.
             </p>
+
 
           </SlideUp>
 
